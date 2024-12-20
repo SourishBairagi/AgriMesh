@@ -1,0 +1,95 @@
+/* styles.css */
+
+/* Import Google Fonts (Alternative if not using link in HTML) */
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); */
+
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Apply the custom font to the entire body */
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    background: url('background.jpg') no-repeat center center fixed; /* Replace with your background image */
+    background-size: cover; /* Ensure the background covers the entire viewport */
+}
+
+/* Logo Section Styling */
+.logo-container {
+    position: absolute;
+    top: 50px; /* Adjust as needed */
+    text-align: center;
+}
+
+.logo {
+    width: 150px; /* Adjust size as needed */
+    height: auto;
+}
+
+/* Container for the buttons */
+.button-container {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 15px; /* Space between buttons */
+    /* Optional: Add a semi-transparent background to make buttons stand out */
+    /* background: rgba(255, 255, 255, 0.8); */
+    /* padding: 20px; */
+    /* border-radius: 10px; */
+}
+
+/* Styling for each button */
+.login-button {
+    padding: 15px 30px;
+    background-color: #28a745; /* Green color */
+    color: #ffffff; /* White text */
+    border: none;
+    border-radius: 20px; /* Rounded corners */
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for hover effect */
+    width: 220px; /* Fixed width for uniformity */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+/* Hover effect for buttons */
+.login-button:hover {
+    background-color: #ff8c00; /* Orange color on hover */
+    transform: translateY(-3px); /* Slight lift on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+/* Active (Pressed) State */
+.login-button:active {
+    transform: translateY(0); /* Remove lift when pressed */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Revert shadow */
+}
+
+/* Remove focus outline for better aesthetics */
+.login-button:focus {
+    outline: none;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .login-button {
+        width: 180px;
+        font-size: 14px;
+        padding: 12px 25px;
+    }
+
+    .logo {
+        width: 120px;
+    }
+}
